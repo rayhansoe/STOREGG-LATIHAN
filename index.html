@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>StoreGG - Get a new Experience in Gaming</title>
+	</head>
+
+	<body>
+		<!-- NavBar -->
+		<section class="navbar">
+			<nav class="container d-flex nav">
+				<a href="/" class="logo"><img src="img/logo.svg" alt="" /></a>
+				<button class="mobileBtn" id="mobileBtn"><img src="" alt="" /></button>
+				<ul class="menu d-flex fld-col" id="menu">
+					<li class="list"><a href="#" class="link link-active">Home</a></li>
+					<li class="list"><a href="#" class="link">Games</a></li>
+					<li class="list"><a href="#" class="link">Reward</a></li>
+					<li class="list"><a href="#" class="link">Discover</a></li>
+					<li class="list"><a href="#" class="link">Global Rank</a></li>
+					<li class="list"><a href="#" class="link link-cta">Sign In</a></li>
+				</ul>
+			</nav>
+		</section>
+
+		<!-- Hero -->
+		<section class="hero">
+			<header class="container hero-container c-sm">
+				<div class="hero-textWrapper d-flex fld-col">
+					<p class="hero-greeting">Halo Gamers,</p>
+					<h1 class="hero-title">Topup & Get a New Experience in Gaming</h1>
+					<p class="hero-text">
+						Kami menyediakan jutaan cara untuk membantu players menjadi pemenang sejati
+					</p>
+					<div class="cta-wrapper">
+						<a href="#featured" class="hero-link cta-getStarted">Get Started</a>
+						<a href="#" class="hero-link cta-decoy">Learn More</a>
+					</div>
+				</div>
+				<div class="hero-banner d-flex">
+					<img class="banner" src="img/Header-1.png" alt="header banner" />
+					<div class="user-review d-flex card">
+						<img src="img/Header-2.png" alt="user-avatar" class="user-avatar-sm" />
+						<div class="user-info">
+							<p class="user-name">Rayhan Soe</p>
+							<p class="user-jobs">Learner</p>
+						</div>
+						<ul class="stars d-flex">
+							<li class="star"><img src="img/star.svg" alt="star" /></li>
+							<li class="star"><img src="img/star.svg" alt="star" /></li>
+							<li class="star"><img src="img/star.svg" alt="star" /></li>
+							<li class="star"><img src="img/star.svg" alt="star" /></li>
+							<li class="star"><img src="img/star.svg" alt="star" /></li>
+						</ul>
+					</div>
+					<div class="hero-card card d-flex">
+						<div class="user-avatar game">
+							<img src="img/Header-3.png" alt="game-avatar" />
+							<div class="status-wrapper"><p class="status">New</p></div>
+						</div>
+						<h6 class="hero-name">Lann Knight</h6>
+						<p class="hero-game">Dota</p>
+					</div>
+				</div>
+			</header>
+		</section>
+	</body>
+	<script>
+		const mobileBtn = document.getElementById('mobileBtn')
+		const menuMobile = document.getElementById('menu')
+
+		mobileBtn.addEventListener('click', () => menuMobile.classList.toggle('show'))
+	</script>
+</html>
