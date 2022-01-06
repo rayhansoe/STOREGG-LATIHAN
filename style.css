@@ -432,8 +432,6 @@ nav {
 
 .reach-info {
 	padding: 2.8rem;
-	/* margin-left: 3rem;
-	margin-right: 3rem; */
 }
 
 .reach-info + .reach-info {
@@ -451,6 +449,49 @@ nav {
 .reach-text {
 	letter-spacing: 1px;
 	color: rgb(121, 121, 153);
+}
+
+/* Story */
+.story {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+
+.s-container {
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.story-info {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	max-width: 620px;
+	margin: 0 auto;
+}
+
+.story-title {
+	font-size: 2.2rem;
+	font-weight: 800;
+	letter-spacing: 1px;
+}
+
+.story-text {
+	color: rgb(1, 1, 56);
+	line-height: 2rem;
+	font-size: 1.2rem;
+	letter-spacing: 1px;
+	max-width: 500px;
+}
+
+.story-cta {
+	font-size: 1.128rem;
+	text-align: center;
+	text-decoration: none;
+	color: rgb(1, 1, 77);
+	padding: 1.5rem 0;
+	background-color: rgba(173, 173, 255, 0.281);
+	border-radius: 8rem;
 }
 
 @media screen and (min-width: 560px) {
@@ -480,6 +521,15 @@ nav {
 	.reach-info {
 		margin-left: 8rem;
 		margin-right: 8rem;
+	}
+
+	/* Story */
+	.story {
+		text-align: center;
+	}
+
+	.story-image {
+		margin: 0 auto;
 	}
 }
 
@@ -599,5 +649,12 @@ nav {
 	.reach-info + .reach-info {
 		border-top: unset;
 		border-left: 1px solid rgba(0, 0, 0, 0.137);
+	}
+
+	/* Story */
+	.s-container {
+		flex-direction: row;
+		align-items: center;
+		text-align: start;
 	}
 }
