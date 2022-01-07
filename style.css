@@ -3,6 +3,10 @@
    License: none (public domain)
 */
 
+* {
+	transition: 0.5s;
+}
+
 html,
 body,
 div,
@@ -134,12 +138,15 @@ img {
 
 body {
 	font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	z-index: 2;
+	background-color: #fff;
 }
 
 section {
 	margin: 1.8rem 0;
 	padding-left: 1.8rem;
 	padding-right: 1.8rem;
+	background-color: #fff;
 }
 
 .container {
@@ -167,6 +174,10 @@ section {
 }
 
 /* NAVBAR */
+.navbar {
+	background-color: #fff;
+}
+
 nav {
 	margin-top: 2rem;
 	align-items: center;
@@ -175,6 +186,7 @@ nav {
 
 .nav {
 	flex-wrap: wrap;
+	position: relative;
 }
 
 .menu {
@@ -182,7 +194,15 @@ nav {
 	flex-grow: 1;
 	align-items: center;
 	width: 100%;
-	display: none;
+	/* display: none; */
+	/* opacity: 0; */
+	position: absolute;
+	/* opacity: 0; */
+	/* z-index: -5; */
+	transform: translate(0, -580px);
+	min-height: 70vh;
+	justify-content: space-between;
+	transition: 0s;
 }
 
 .list {
@@ -217,7 +237,14 @@ nav {
 }
 
 .show {
-	display: flex;
+	opacity: 1;
+	position: relative;
+	transform: translate(0, 0);
+	transition: 0.5s;
+}
+
+.mobileBtn {
+	cursor: pointer;
 }
 
 .navbar {
@@ -228,6 +255,7 @@ nav {
 .hero {
 	margin-top: 4rem;
 	margin-bottom: 2rem;
+	background-color: #fff;
 }
 
 .hero-container {
@@ -310,9 +338,14 @@ nav {
 	flex-wrap: wrap;
 	align-items: center;
 	width: 180px;
-	border: 1px solid rgba(0, 0, 0, 0.144);
 	top: 100px;
 	left: -72px;
+	box-shadow: -8px 8px 58px rgba(0, 0, 0, 0.1);
+	border: 3px solid rgba(155, 155, 253, 0);
+}
+
+.user-review:hover {
+	border: 3px solid rgba(192, 192, 255, 0.658);
 }
 
 .user-info {
@@ -334,9 +367,14 @@ nav {
 	position: absolute;
 	align-items: center;
 	flex-direction: column;
-	border: 1px solid rgba(0, 0, 0, 0.137);
 	right: -50px;
 	bottom: 108px;
+	box-shadow: -8px 8px 58px rgba(0, 0, 0, 0.1);
+	border: 3px solid rgba(192, 192, 255, 0);
+}
+
+.hero-card:hover {
+	border: 3px solid rgba(192, 192, 255, 0.658);
 }
 
 .status-wrapper {
@@ -400,6 +438,12 @@ nav {
 	flex-grow: 1;
 	text-align: center;
 	padding: 3rem;
+	box-sizing: border-box;
+	border: 3px solid rgba(124, 124, 255, 0);
+}
+
+.feature-card:hover {
+	border: 3px solid rgb(155, 155, 253);
 }
 
 .feature-textWrapper {
@@ -547,6 +591,11 @@ nav {
 }
 
 @media screen and (min-width: 560px) {
+	/* Navbar */
+	.list .link {
+		font-size: 1.8rem;
+	}
+
 	/* HERO */
 	.hero-textWrapper {
 		text-align: center;
@@ -623,6 +672,15 @@ nav {
 		justify-content: space-between;
 		list-style-type: none;
 		padding: 0;
+		min-height: unset;
+		opacity: 1;
+		transform: translate(0, 0);
+		position: relative;
+		transition: 0s;
+	}
+
+	.list .link {
+		font-size: 1em;
 	}
 
 	.list {
